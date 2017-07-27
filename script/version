@@ -4,7 +4,7 @@ function version {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  local ver_lastpass="0.0.1"
+  local ver_lastpass="$(lpass --version 2>/dev/null | awk '{print $3}' | perl -pe 's{^v}{}' || true)"
   jq -n --arg lastpass "$ver_lastpass" '{lastpass: $lastpass}'
 }
 

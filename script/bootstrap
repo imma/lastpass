@@ -4,7 +4,11 @@ function main {
   local shome="$(cd -P -- "${BASH_SOURCE%/*}/.." && pwd -P)"
   source "$shome/script/profile"
 
-  uname -a
+  case "$(uname -s)" in
+    Darwin)
+      brew install lastpass-cli --with-pinentry 
+      ;;
+  esac
 }
 
 main "$@"

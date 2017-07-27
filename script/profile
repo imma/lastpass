@@ -6,7 +6,7 @@ function _lastpass_profile {
   #export ANSIBLE_ROLES_PATH="$shome/roles${ANSIBLE_ROLES_PATH:+:${ANSIBLE_ROLES_PATH}}"
   #export ANSIBLE_LIBRARY="$shome/library${ANSIBLE_LIBRARY:+:${ANSIBLE_LIBRARY}}"
 
-  LASTPASS_VERSION='0.0.1'
+  LASTPASS_VERSION='1.2.1'
 }
 
 _lastpass_profile
